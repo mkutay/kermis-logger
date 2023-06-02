@@ -14,23 +14,22 @@ app.get("/", (req, res) => {
 app.post("/add", (req, res) => {
   const { a, b } = req.body;
   let sum = parseInt(a) + parseInt(b);
-  let jsn = {"data": []};
-  console.log(sum);
-  fs.readFile('./data.json', 'utf8', (error, data) => {
-    if (error) {
-      console.log(error);
-      return;
-    }
-    jsn = JSON.parse(data);
-  });
+  let data;
+  try {
+    data = fs.readFileSync("./data.json");
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+  let jsn = JSON.parse(data);
   jsn["data"].push({"a": a, "b": b, "sum": sum});
-  fs.writeFile('./data.json', JSON.stringify(jsn), (error) => {
-    if (error) {
-      console.log("there has been an error");
-      return;
-    }
-    console.log("success");
-  })
+  data = JSON.stringify(jsn);
+  try {
+    fs.writeFileSync("data.json", data);
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
   res.send({
     result: sum,
   });
