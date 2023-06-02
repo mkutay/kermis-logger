@@ -10,20 +10,22 @@
 
   <body>
     <h1>11 IB Kermes Satis Takip Sistemi </h1>
-    <img src="assets/ari_logo.png" alt="The Ari logo">
+    <!-- <img src="assets/ari_logo.png" alt="The Ari logo"> -->
 
-    <div class="container">
-      <h2>Simple POST Form</h2>
-      </h1>
-      <form>
-        <label>Number 1:</label>
-        <input id="num1" type="number" />
-        <label>Number 2:</label>
-        <input id="num2" type="number" />
-        <input type="submit" value="Add"/>
-      </form>
-      <div class="result">Click Add!</div>
-    </div>
+    <ul>
+      <li class="checkbox">
+        <input class="checkbox-flip" type="checkbox" id="kitap ayraci"/>
+        <label for="kitap ayraci"><span></span>Kitap Ayraci</label>
+      </li>
+      <li class="checkbox">
+        <input class="checkbox-flip" type="checkbox" id="kek"/>
+        <label for="kek"><span></span>Kek</label>
+      </li>
+      <li class="checkbox">
+        <input class="checkbox-flip" type="checkbox" id="kurabiye"/>
+        <label for="kurabiye"><span></span>Kurabiye</label>
+      </li>
+    </ul>
 
     <script>
       document.addEventListener("submit", sendData);

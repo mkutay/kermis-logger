@@ -1,0 +1,28 @@
+$font-size: calc(0.8rem + 0.2vw) !default
+$font-weight: 400 !default
+$font-family: "PT Sans", -apple-system, "Helvetica Neue", "Segoe UI", "Roboto", sans-serif !default
+$heading-weight: 600 !default
+$line-height: 1.6 !default
+
+$nord0: #2e3440 !default
+$nord1: #3b4252 !default
+$nord2: #434c5e !default
+$nord3: #4c566a !default
+
+$nord4: #d8dee9 !default
+$nord5: #e5e9f0 !default
+$nord6: #eceff4 !default
+
+$nord7: #8fbcbb !default
+$nord8: #88c0d0 !default
+$nord9: #81a1c1 !default
+$nord10: #5e81ac !default
+
+$nord11: #bf616a !default
+$nord12: #d08770 !default
+$nord13: #ebcb8b !default
+$nord14: #a3be8c !default
+$nord15: #b48ead !default
+
+@function reduce ($percent)
+  @return rgba(mix($nord0, $nord4), $percent / 100) 
