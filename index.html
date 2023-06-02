@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="style.css" rel="stylesheet"/>
     <title>REST Client</title>
-    
   </head>
 
 
   <body>
     <h1>11 IB Kermes Satis Takip Sistemi </h1>
     <img src="ari_logo.png" alt="The Ari logo">
-
-
 
     <div class="container">
       <h2>Simple POST Form</h2>
@@ -27,12 +24,13 @@
       </form>
       <div class="result">Click Add!</div>
     </div>
+
     <script>
       document.addEventListener("submit", sendData);
       function sendData(e) {
         e.preventDefault();
-        const a = document.querySelector("#num1").value;
-        const b = document.querySelector("#num2").value;
+        const bought = document.querySelector("#num1").value;
+        const cost = document.querySelector("#num2").value;
         fetch("/add", {
           method: "POST",
           headers: {
@@ -40,8 +38,8 @@
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            a: parseInt(a),
-            b: parseInt(b)
+            bought: bought,
+            cost: parseInt(cost)
           })
         })
           .then(res => res.json())
