@@ -22,7 +22,9 @@ app.post("/add", (req, res) => {
     throw error;
   }
   let jsn = JSON.parse(data);
+
   jsn["data"].push({"a": a, "b": b, "sum": sum});
+  
   data = JSON.stringify(jsn);
   try {
     fs.writeFileSync("data.json", data);
