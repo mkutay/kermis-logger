@@ -12,7 +12,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/add", (req, res) => {
-  const { a, b } = req.body;
+  const { bought, cost } = req.body;
   let sum = parseInt(a) + parseInt(b);
   let data;
   try {
@@ -23,8 +23,8 @@ app.post("/add", (req, res) => {
   }
   let jsn = JSON.parse(data);
 
-  jsn["data"].push({"a": a, "b": b, "sum": sum});
-  
+  jsn["data"].push({"bought": bought, "cost": cost});
+
   data = JSON.stringify(jsn);
   try {
     fs.writeFileSync("data.json", data);
