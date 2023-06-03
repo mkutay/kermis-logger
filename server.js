@@ -30,6 +30,7 @@ app.post("/add", (req, res) => {
     throw error;
   }
   let jsn = JSON.parse(data);
+  
   if (firstTime == true) {
     firstTime = false;
     jsn = {"data": []};
