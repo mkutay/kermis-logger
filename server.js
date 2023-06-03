@@ -22,7 +22,6 @@ app.get("/", (req, res) => {
 
 app.post("/add", (req, res) => {
   const { bought, cost } = req.body;
-  console.log(bought, cost);
   let data;
   try {
     data = fs.readFileSync("./data.json");
