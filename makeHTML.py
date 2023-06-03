@@ -1,6 +1,6 @@
 items = [["Kitap Ayracı", "kitap ayraci"], ["İp Bileklik", "ip bileklik"], ["Boncuk Bileklik", "boncuk bileklik"], ["Küpe", "kupe"], ["Kolye", "kolye"]]
 foods = [["Mavi Meth", "mavi meth"], ["Zencefilli ve Tarçınlı Kurabiye", "zencefil kurabiye"], ["Makarna Salatası", "marakna salatasi"], ["Alman Salatası", "alman salatasi"], ["Waffle", "waffle"], ["Browni", "browni"], ["Kek", "kek"], ["Normal Kurabiye", "normal kurabiye"], ["Ispanakalı Börek", "ispanakli borek"]]
-games = [["Mini Golf", "mini golf"], ["Mini Basketbol", "mini basketbol"], ["Rampalı Oyun", "rampali oyun"], ["Ağaca Hulahoop Bağlama", "agaca hulahoop"], ["Eşek Kuyruğu", "esek kuyrugu"], ["Memory Games", "memory games"], ["White Board Oyunu", "white board"], ["Salınım (Labutlar)", "salinim"], ["Halka Geçirmece", "halka gecirmece"], ["Yokuş Oyunu", "yokus oyunu"]]
+games = [["Üçlü Kuponn", "uclu"], ["Beşli Kupon", "besli"], ["Yedili Kupon", "yedili"]]
 
 # Mini golf
 # Mini basketbol
