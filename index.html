@@ -60,6 +60,10 @@
       <button class="button-2" role="button" id="send-button">Send</button>
     </div>
 
+    <div style="text-align: center">
+      <b><span id="error"></span></b>
+    </div>
+
     <footer>
       <div>
         Made by <b style="color: #bf616a;">Kutay</b>
@@ -90,11 +94,32 @@
         for (let key in items) {
           if (items[key] == 0) continue;
           bought[key] = items[key];
+        }
+        const cost = document.querySelector("#cost").value;
+
+        if (cost == "") {
+          document.getElementById("error").style = "color: #bf616a;";
+          document.getElementById("error").innerHTML = "Error: No cost written.";
+          return;
+        } else if (Object.keys(bought).length == 0) {
+          document.getElementById("error").style = "color: #bf616a;";
+          document.getElementById("error").innerHTML = "Error: No items selected.";
+          return;
+        } else if (/^\d+$/.test(cost) == false) {
+          document.getElementById("error").style = "color: #bf616a;";
+          document.getElementById("error").innerHTML = "Error: Cost contains non digit characters."
+          return;
+        }
+
+        document.querySelector("#cost").value = "";
+        for (let key in items) {
           items[key] = 0;
           document.getElementById(key + " num").innerHTML = 0
         }
-        const cost = document.querySelector("#cost").value;
-        document.querySelector("#cost").value = "";
+
+        document.getElementById("error").style = "color: #a3be8c;";
+        document.getElementById("error").innerHTML = "Success!";
+
         fetch("/add", {
           method: "POST",
           headers: {
