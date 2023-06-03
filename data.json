@@ -1,1 +1,1 @@
-{"data":[{"bought":["kitap ayraci","kurabiye"],"cost":5},{"bought":["kek","kurabiye"],"cost":5},{"bought":["kek","kurabiye"],"cost":123},{"bought":["kitap ayraci","kek"],"cost":123},{"bought":["kitap ayraci","kek"],"cost":123}]}
+{"data":[{"bought":{"kitap ayraci":3,"kek":5},"cost":"123","timeStamp":1685794350164},{"bought":{"kitap ayraci":2,"kek":4},"cost":"123","timeStamp":1685794407700}]}

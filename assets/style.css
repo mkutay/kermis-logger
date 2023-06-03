@@ -167,7 +167,31 @@ pre {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  margin-top: 0.75em; }
+
+.item-button {
+  background-color: #4c566a;
+  border-radius: 8px;
+  border-width: 0;
+  color: #d8dee9;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 8px;
+  list-style: none;
+  padding: 10px 10px;
+  text-align: center;
+  vertical-align: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 3em;
+  align-items: center;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em; }
 
 body {
   display: flex;

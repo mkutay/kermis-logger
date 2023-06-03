@@ -16,7 +16,7 @@
     <!-- <img src="assets/ari_logo.png" alt="The Ari logo"> -->
 
     <div style="margin: 0 auto">
-      <ul>
+      <!-- <ul>
         <li class="checkbox">
           <input class="checkbox-flip" name="sold-item" type="checkbox" id="kitap ayraci"/>
           <label for="kitap ayraci"><span></span>Kitap Ayraci</label>
@@ -29,7 +29,19 @@
           <input class="checkbox-flip" name="sold-item" type="checkbox" id="kurabiye"/>
           <label for="kurabiye"><span></span>Kurabiye</label>
         </li>
-      </ul>
+      </ul> -->
+      <div>
+        <input type=button class="item-button" value="-" name="sold-item" id="kitap ayraci" onclick="buttonDec('kitap ayraci')"/>
+        <input type=button class="item-button" value="+" name="sold-item" id="kitap ayraci" onclick="buttonInc('kitap ayraci')"/>
+        <span id="kitap ayraci num"></span>
+        <span>x Kitap Ayraci</span>
+      </div>
+      <div>
+        <input type=button class="item-button" value="-" name="sold-item" id="kek" onclick="buttonDec('kek')"/>
+        <input type=button class="item-button" value="+" name="sold-item" id="kek" onclick="buttonInc('kek')"/>
+        <span id="kek num"></span>
+        <span>x Kek</span>
+      </div>
     </div>
 
     <div style="text-align: center">
@@ -49,16 +61,32 @@
     </footer>
 
     <script>
+      let buttons = document.querySelectorAll("input[name='sold-item']");
+      let items = {};
+      buttons.forEach((button) => {
+        items[button.id] = 0;
+        document.getElementById(button.id + " num").innerHTML = 0;
+      });
+      console.log(items);
+      function buttonInc(id) {
+        document.getElementById(id + " num").innerHTML = ++items[id];
+      }
+      function buttonDec(id) {
+        if (items[id] == 0) return;
+        document.getElementById(id + " num").innerHTML = --items[id];
+      }
+
       const sendBtn = document.querySelector("#send-button");
       sendBtn.addEventListener('click', sendData);
       function sendData(e) {
         e.preventDefault();
-        let checkboxes = document.querySelectorAll("input[name='sold-item']:checked");
-        let bought = [];
-        checkboxes.forEach((checkbox) => {
-          checkbox.checked = false;
-          bought.push(checkbox.id);
-        });
+        let bought = {};
+        for (let key in items) {
+          if (items[key] == 0) continue;
+          bought[key] = items[key];
+          items[key] = 0;
+          document.getElementById(key + " num").innerHTML = 0
+        }
         const cost = document.querySelector("#cost").value;
         document.querySelector("#cost").value = "";
         fetch("/add", {
