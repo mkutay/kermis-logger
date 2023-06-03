@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/add", (req, res) => {
-  const { bought, cost } = req.body;
+  const { bought, cost, timeStamp } = req.body;
   let data;
   try {
     data = fs.readFileSync("./data.json");
@@ -30,13 +30,13 @@ app.post("/add", (req, res) => {
     throw error;
   }
   let jsn = JSON.parse(data);
-  
+
   if (firstTime == true) {
     firstTime = false;
     jsn = {"data": []};
   }
 
-  jsn["data"].push({"bought": bought, "cost": cost});
+  jsn["data"].push({"bought": bought, "cost": cost, "timeStamp": timeStamp});
 
   data = JSON.stringify(jsn);
   try {

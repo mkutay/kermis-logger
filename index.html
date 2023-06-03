@@ -69,7 +69,8 @@
           },
           body: JSON.stringify({
             "bought": bought,
-            "cost": cost
+            "cost": cost,
+            "timeStamp": Date.now()
           })
         })
           .then(res => res.json())
