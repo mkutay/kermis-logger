@@ -15,36 +15,52 @@
     </header>
     <!-- <img src="assets/ari_logo.png" alt="The Ari logo"> -->
 
-    <ul>
-      <li class="checkbox">
-        <input class="checkbox-flip" name="sold-item" type="checkbox" id="kitap ayraci"/>
-        <label for="kitap ayraci"><span></span>Kitap Ayraci</label>
-      </li>
-      <li class="checkbox">
-        <input class="checkbox-flip" name="sold-item" type="checkbox" id="kek"/>
-        <label for="kek"><span></span>Kek</label>
-      </li>
-      <li class="checkbox">
-        <input class="checkbox-flip" name="sold-item" type="checkbox" id="kurabiye"/>
-        <label for="kurabiye"><span></span>Kurabiye</label>
-      </li>
-    </ul>
+    <div style="margin: 0 auto">
+      <ul>
+        <li class="checkbox">
+          <input class="checkbox-flip" name="sold-item" type="checkbox" id="kitap ayraci"/>
+          <label for="kitap ayraci"><span></span>Kitap Ayraci</label>
+        </li>
+        <li class="checkbox">
+          <input class="checkbox-flip" name="sold-item" type="checkbox" id="kek"/>
+          <label for="kek"><span></span>Kek</label>
+        </li>
+        <li class="checkbox">
+          <input class="checkbox-flip" name="sold-item" type="checkbox" id="kurabiye"/>
+          <label for="kurabiye"><span></span>Kurabiye</label>
+        </li>
+      </ul>
+    </div>
+
     <div style="text-align: center">
-      <button class="button-2" role="button">Button 2</button>
+      <label for="cost">Cost: </label>
+      <input type="text" id="cost" name="cost" class="cost-num"> 
+    </div>
+
+    <div style="text-align: center">
+      <!-- <input type="submit" value="Send" class="button-2" id="send-button" role="button"/> -->
+      <button class="button-2" role="button" id="send-button">Send</button>
     </div>
 
     <footer>
       <div>
-        Made by <b style="color: #bf616a;">Kutay and Atahan</b>
+        Made by <b style="color: #bf616a;">Kutay</b> and <b style="color: #bf616a;">Atahan</b>
       </div>
     </footer>
 
     <script>
-      document.addEventListener("submit", sendData);
+      const sendBtn = document.querySelector("#send-button");
+      sendBtn.addEventListener('click', sendData);
       function sendData(e) {
         e.preventDefault();
-        const bought = document.querySelector("#num1").value;
-        const cost = document.querySelector("#num2").value;
+        let checkboxes = document.querySelectorAll("input[name='sold-item']:checked");
+        let bought = [];
+        checkboxes.forEach((checkbox) => {
+          checkbox.checked = false;
+          bought.push(checkbox.id);
+        });
+        const cost = document.querySelector("#cost").value;
+        document.querySelector("#cost").value = "";
         fetch("/add", {
           method: "POST",
           headers: {
@@ -52,8 +68,8 @@
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            bought: bought,
-            cost: parseInt(cost)
+            "bought": bought,
+            "cost": parseInt(cost)
           })
         })
           .then(res => res.json())
@@ -61,9 +77,9 @@
             const {
               result
             } = data;
-            document.querySelector(
-              ".result"
-            ).innerText = `The sum is: ${result}`;
+            if (result != "success") {
+              console.log("something bad happened");
+            }
           })
           .catch(err => console.log(err));
       }

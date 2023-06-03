@@ -1,3 +1,1 @@
-{
-    "data": []
-}
+{"data":[{"bought":["kitap ayraci","kurabiye"],"cost":5},{"bought":["kek","kurabiye"],"cost":5},{"bought":["kek","kurabiye"],"cost":123},{"bought":["kitap ayraci","kek"],"cost":123},{"bought":["kitap ayraci","kek"],"cost":123}]}
