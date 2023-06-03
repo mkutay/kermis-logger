@@ -1,4 +1,17 @@
-items = [["Kitap Ayraci", "kitap ayraci"], ["Kek", "kek"], ["Kurabiye", "kurabiye"]]
+items = [["Kitap Ayracı", "kitap ayraci"], ["İp Bileklik", "ip bileklik"], ["Boncuk Bileklik", "boncuk bileklik"], ["Küpe", "kupe"], ["Kolye", "kolye"]]
+foods = [["Mavi Meth", "mavi meth"], ["Zencefilli ve Tarçınlı Kurabiye", "zencefil kurabiye"], ["Makarna Salatası", "marakna salatasi"], ["Alman Salatası", "alman salatasi"], ["Waffle", "waffle"], ["Browni", "browni"], ["Kek", "kek"], ["Normal Kurabiye", "normal kurabiye"], ["Ispanakalı Börek", "ispanakli borek"]]
+games = [["Mini Golf", "mini golf"], ["Mini Basketbol", "mini basketbol"], ["Rampalı Oyun", "rampali oyun"], ["Ağaca Hulahoop Bağlama", "agaca hulahoop"], ["Eşek Kuyruğu", "esek kuyrugu"], ["Memory Games", "memory games"], ["White Board Oyunu", "white board"], ["Salınım (Labutlar)", "salinim"], ["Halka Geçirmece", "halka gecirmece"], ["Yokuş Oyunu", "yokus oyunu"]]
+
+# Mini golf
+# Mini basketbol
+# Rampalı oyun 
+# Ağaca hulahoop bağlama
+# Eşek kuyruğu
+# Memory games
+# White board oyunu
+# Salınım (labutlar)
+# Halka geçirmece
+# Yokuş oyunu (yeni)
 
 # <div>
 #   <input type=button class="item-button" value="-" name="sold-item" id="kek" onclick="buttonDec('kek')"/>
@@ -7,7 +20,26 @@ items = [["Kitap Ayraci", "kitap ayraci"], ["Kek", "kek"], ["Kurabiye", "kurabiy
 #   <span>x Kek</span>
 # </div>
 html = ""
+html += """<p>Items</p>\n"""
 for item in items:
+  html += "<div>\n"
+  html += """  <input type=button class="item-button" value="-" name="sold-item" id="{}" onclick="buttonDec('{}')"/>\n""".format(item[1], item[1])
+  html += """  <input type=button class="item-button" value="+" name="sold-item" id="{}" onclick="buttonInc('{}')"/>\n""".format(item[1], item[1])
+  html += """  <span id="{} num"></span>\n""".format(item[1])
+  html += """  <span>x {}</span>\n""".format(item[0])
+  html += "</div>\n"
+
+html += """<p>Foods</p>\n"""
+for item in foods:
+  html += "<div>\n"
+  html += """  <input type=button class="item-button" value="-" name="sold-item" id="{}" onclick="buttonDec('{}')"/>\n""".format(item[1], item[1])
+  html += """  <input type=button class="item-button" value="+" name="sold-item" id="{}" onclick="buttonInc('{}')"/>\n""".format(item[1], item[1])
+  html += """  <span id="{} num"></span>\n""".format(item[1])
+  html += """  <span>x {}</span>\n""".format(item[0])
+  html += "</div>\n"
+
+html += """<p>Games</p>\n"""
+for item in games:
   html += "<div>\n"
   html += """  <input type=button class="item-button" value="-" name="sold-item" id="{}" onclick="buttonDec('{}')"/>\n""".format(item[1], item[1])
   html += """  <input type=button class="item-button" value="+" name="sold-item" id="{}" onclick="buttonInc('{}')"/>\n""".format(item[1], item[1])

@@ -28,7 +28,9 @@ b, strong, th {
   font-weight: 600; }
 
 p {
-  text-align: justify; }
+  text-align: justify;
+  color: #b48ead;
+  font-weight: 600; }
 
 a {
   color: #81a1c1;

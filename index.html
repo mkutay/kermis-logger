@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/style.css" type="text/css" rel="stylesheet"/>
     <title>11 IB Kermes Satis Takip Sistemi</title>
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+      $(function() {
+        $("#includeHtml").load("output.html");
+      });
+    </script>
   </head>
 
 
@@ -13,41 +19,155 @@
     <header>
       <a href="/" class="title">11 IB Kermes Satis Takip Sistemi</a>
     </header>
-    <!-- <img src="assets/ari_logo.png" alt="The Ari logo"> -->
 
-    <div style="margin: 0 auto">
-      <!-- <ul>
-        <li class="checkbox">
-          <input class="checkbox-flip" name="sold-item" type="checkbox" id="kitap ayraci"/>
-          <label for="kitap ayraci"><span></span>Kitap Ayraci</label>
-        </li>
-        <li class="checkbox">
-          <input class="checkbox-flip" name="sold-item" type="checkbox" id="kek"/>
-          <label for="kek"><span></span>Kek</label>
-        </li>
-        <li class="checkbox">
-          <input class="checkbox-flip" name="sold-item" type="checkbox" id="kurabiye"/>
-          <label for="kurabiye"><span></span>Kurabiye</label>
-        </li>
-      </ul> -->
-      <div>
-        <input type=button class="item-button" value="-" name="sold-item" id="kitap ayraci" onclick="buttonDec('kitap ayraci')"/>
-        <input type=button class="item-button" value="+" name="sold-item" id="kitap ayraci" onclick="buttonInc('kitap ayraci')"/>
-        <span id="kitap ayraci num"></span>
-        <span>x Kitap Ayraci</span>
-      </div>
-      <div>
-        <input type=button class="item-button" value="-" name="sold-item" id="kek" onclick="buttonDec('kek')"/>
-        <input type=button class="item-button" value="+" name="sold-item" id="kek" onclick="buttonInc('kek')"/>
-        <span id="kek num"></span>
-        <span>x Kek</span>
-      </div>
-      <div>
-        <input type=button class="item-button" value="-" name="sold-item" id="kurabiye" onclick="buttonDec('kurabiye')"/>
-        <input type=button class="item-button" value="+" name="sold-item" id="kurabiye" onclick="buttonInc('kurabiye')"/>
-        <span id="kurabiye num"></span>
-        <span>x Kurabiye</span>
-      </div>            
+    <div style="margin: 0 auto;">
+      <p>Items</p>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="kitap ayraci" onclick="buttonDec('kitap ayraci')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="kitap ayraci" onclick="buttonInc('kitap ayraci')"/>
+  <span id="kitap ayraci num"></span>
+  <span>x Kitap Ayracı</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="ip bileklik" onclick="buttonDec('ip bileklik')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="ip bileklik" onclick="buttonInc('ip bileklik')"/>
+  <span id="ip bileklik num"></span>
+  <span>x İp Bileklik</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="boncuk bileklik" onclick="buttonDec('boncuk bileklik')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="boncuk bileklik" onclick="buttonInc('boncuk bileklik')"/>
+  <span id="boncuk bileklik num"></span>
+  <span>x Boncuk Bileklik</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="kupe" onclick="buttonDec('kupe')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="kupe" onclick="buttonInc('kupe')"/>
+  <span id="kupe num"></span>
+  <span>x Küpe</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="kolye" onclick="buttonDec('kolye')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="kolye" onclick="buttonInc('kolye')"/>
+  <span id="kolye num"></span>
+  <span>x Kolye</span>
+</div>
+<p>Foods</p>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="mavi meth" onclick="buttonDec('mavi meth')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="mavi meth" onclick="buttonInc('mavi meth')"/>
+  <span id="mavi meth num"></span>
+  <span>x Mavi Meth</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="zencefil kurabiye" onclick="buttonDec('zencefil kurabiye')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="zencefil kurabiye" onclick="buttonInc('zencefil kurabiye')"/>
+  <span id="zencefil kurabiye num"></span>
+  <span>x Zencefilli ve Tarçınlı Kurabiye</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="marakna salatasi" onclick="buttonDec('marakna salatasi')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="marakna salatasi" onclick="buttonInc('marakna salatasi')"/>
+  <span id="marakna salatasi num"></span>
+  <span>x Makarna Salatası</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="alman salatasi" onclick="buttonDec('alman salatasi')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="alman salatasi" onclick="buttonInc('alman salatasi')"/>
+  <span id="alman salatasi num"></span>
+  <span>x Alman Salatası</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="waffle" onclick="buttonDec('waffle')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="waffle" onclick="buttonInc('waffle')"/>
+  <span id="waffle num"></span>
+  <span>x Waffle</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="browni" onclick="buttonDec('browni')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="browni" onclick="buttonInc('browni')"/>
+  <span id="browni num"></span>
+  <span>x Browni</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="kek" onclick="buttonDec('kek')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="kek" onclick="buttonInc('kek')"/>
+  <span id="kek num"></span>
+  <span>x Kek</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="normal kurabiye" onclick="buttonDec('normal kurabiye')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="normal kurabiye" onclick="buttonInc('normal kurabiye')"/>
+  <span id="normal kurabiye num"></span>
+  <span>x Normal Kurabiye</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="ispanakli borek" onclick="buttonDec('ispanakli borek')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="ispanakli borek" onclick="buttonInc('ispanakli borek')"/>
+  <span id="ispanakli borek num"></span>
+  <span>x Ispanakalı Börek</span>
+</div>
+<p>Games</p>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="mini golf" onclick="buttonDec('mini golf')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="mini golf" onclick="buttonInc('mini golf')"/>
+  <span id="mini golf num"></span>
+  <span>x Mini Golf</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="mini basketbol" onclick="buttonDec('mini basketbol')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="mini basketbol" onclick="buttonInc('mini basketbol')"/>
+  <span id="mini basketbol num"></span>
+  <span>x Mini Basketbol</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="rampali oyun" onclick="buttonDec('rampali oyun')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="rampali oyun" onclick="buttonInc('rampali oyun')"/>
+  <span id="rampali oyun num"></span>
+  <span>x Rampalı Oyun</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="agaca hulahoop" onclick="buttonDec('agaca hulahoop')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="agaca hulahoop" onclick="buttonInc('agaca hulahoop')"/>
+  <span id="agaca hulahoop num"></span>
+  <span>x Ağaca Hulahoop Bağlama</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="esek kuyrugu" onclick="buttonDec('esek kuyrugu')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="esek kuyrugu" onclick="buttonInc('esek kuyrugu')"/>
+  <span id="esek kuyrugu num"></span>
+  <span>x Eşek Kuyruğu</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="memory games" onclick="buttonDec('memory games')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="memory games" onclick="buttonInc('memory games')"/>
+  <span id="memory games num"></span>
+  <span>x Memory Games</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="white board" onclick="buttonDec('white board')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="white board" onclick="buttonInc('white board')"/>
+  <span id="white board num"></span>
+  <span>x White Board Oyunu</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="salinim" onclick="buttonDec('salinim')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="salinim" onclick="buttonInc('salinim')"/>
+  <span id="salinim num"></span>
+  <span>x Salınım (Labutlar)</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="halka gecirmece" onclick="buttonDec('halka gecirmece')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="halka gecirmece" onclick="buttonInc('halka gecirmece')"/>
+  <span id="halka gecirmece num"></span>
+  <span>x Halka Geçirmece</span>
+</div>
+<div>
+  <input type=button class="item-button" value="-" name="sold-item" id="yokus oyunu" onclick="buttonDec('yokus oyunu')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="yokus oyunu" onclick="buttonInc('yokus oyunu')"/>
+  <span id="yokus oyunu num"></span>
+  <span>x Yokuş Oyunu</span>
+</div>
     </div>
 
     <div style="text-align: center">
@@ -72,6 +192,7 @@
 
     <script>
       let buttons = document.querySelectorAll("input[name='sold-item']");
+      console.log(buttons);
       let items = {};
       buttons.forEach((button) => {
         items[button.id] = 0;
