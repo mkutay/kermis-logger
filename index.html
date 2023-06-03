@@ -4,28 +4,40 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="assets/style.css" type="text/css" rel="stylesheet"/>
-    <title>REST Client</title>
+    <title>11 IB Kermes Satis Takip Sistemi</title>
   </head>
 
 
   <body>
-    <h1>11 IB Kermes Satis Takip Sistemi </h1>
+
+    <header>
+      <a href="/" class="title">11 IB Kermes Satis Takip Sistemi</a>
+    </header>
     <!-- <img src="assets/ari_logo.png" alt="The Ari logo"> -->
 
     <ul>
       <li class="checkbox">
-        <input class="checkbox-flip" type="checkbox" id="kitap ayraci"/>
+        <input class="checkbox-flip" name="sold-item" type="checkbox" id="kitap ayraci"/>
         <label for="kitap ayraci"><span></span>Kitap Ayraci</label>
       </li>
       <li class="checkbox">
-        <input class="checkbox-flip" type="checkbox" id="kek"/>
+        <input class="checkbox-flip" name="sold-item" type="checkbox" id="kek"/>
         <label for="kek"><span></span>Kek</label>
       </li>
       <li class="checkbox">
-        <input class="checkbox-flip" type="checkbox" id="kurabiye"/>
+        <input class="checkbox-flip" name="sold-item" type="checkbox" id="kurabiye"/>
         <label for="kurabiye"><span></span>Kurabiye</label>
       </li>
     </ul>
+    <div style="text-align: center">
+      <button class="button-2" role="button">Button 2</button>
+    </div>
+
+    <footer>
+      <div>
+        Made by <b style="color: #bf616a;">Kutay and Atahan</b>
+      </div>
+    </footer>
 
     <script>
       document.addEventListener("submit", sendData);

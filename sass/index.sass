@@ -1,54 +1,14 @@
-@import '_colors'
-@import '_fonts'
+@import colors, font, basic, layout, classes
 
-body
-  background: $nord0
-  color: $nord4
-  font-family: $font-family
-  font-weight: $font-weight
-  font-size: $font-size
-  line-height: $line-height
-  margin: 0
-  min-height: 100vh
-  -webkit-text-size-adjust: 100%
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
-  justify-content: center
-  align-items: center
-  display: flex
-  flex-direction: column
+@media (min-width: 40em)
+  body > header, body > article, body > footer
+    padding: 1.75em calc(40% - 17em)
 
-@media (prefers-color-scheme: light)
-  background: $nord4
-  color: $nord0
+body > header
+  box-shadow: 0 0 .6em rgba($nord0, 0.04)
+  border-bottom: 1px solid reduce(14)
 
-h1, h2, h3, h4, h5, h6
-  font-weight: $heading-weight
-
-.checkbox
-  margin: 15px
-
-.ul
-  list-style-type: circle
-
-.checkbox-flip
-  display: none
-
-.checkbox-flip + label span
-  display: inline-block
-  width: 25px 
-  height: 19px 
-  margin: 0 5px -4px 0
-  &:before,
-  &:after
-    content: ""
-    position: absolute
-    z-index: 1
-    width: 1rem
-    height: 1rem
-    background: transparent
-    border: 2px solid $nord15
-
-.checkbox-flip:checked + label span
-  &:before 
-    background: $nord15
+body > footer
+  box-shadow: 0 0 .6em rgba($nord0, 0.04) inset
+  border-top: 1px solid reduce(14)
+  opacity: .9
