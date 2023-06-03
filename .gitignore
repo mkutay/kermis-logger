@@ -1,6 +1,8 @@
-**/.sass-cache
-**/.sass-cache/*
 .DS_Store
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
 
 # Logs
 logs
