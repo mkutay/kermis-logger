@@ -22,7 +22,7 @@ amogus = []
 mxLength = 0
 
 for item in data:
-  times.append([strftime('%Y-%m-%d %H:%M:%S', localtime(item["timeStamp"] / 1000))])
+  times.append([strftime('%Y-%m-%d %H:%M:%S', localtime(item["timeStamp"] / 1000 + 10800))])
   totalCost += int(item["cost"])
   timeItem = []
   for key, value in item["bought"].items():
