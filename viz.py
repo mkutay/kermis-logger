@@ -1,3 +1,5 @@
+### I could have also done what this file does in JS too, instead of running this python script in JS.
+
 import json
 import os.path
 import sys
