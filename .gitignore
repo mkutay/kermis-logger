@@ -3,6 +3,7 @@
 *.css.map
 *.sass.map
 *.scss.map
+tokenn.json
 
 # Logs
 logs
