@@ -51,7 +51,7 @@ app.post("/add", (req, res) => {
   });
 
   setTimeout(() => {
-    const pythonProcess = spawn("python", ["./viz.py"]);
+    const pythonProcess = spawn("python3", ["./viz.py"]);
   }, 1000);
 });
 
