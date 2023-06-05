@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const fs = require('fs');
 const cors = require('cors')
+const spawn = require("child_process").spawn;
 
 let firstTime = true;
 
@@ -48,6 +49,13 @@ app.post("/add", (req, res) => {
   res.send({
     result: "success",
   });
+
+  setTimeout(() => {
+    const pythonProcess = spawn("python3", ["./viz.py"]);
+    pythonProcess.stdout.on('data', (data) => {
+      console.log(data);
+    });
+  }, 1000);
 });
 
 app.listen(5000, () => {

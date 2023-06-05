@@ -1,6 +1,6 @@
 import json
 import os.path
-import math
+import sys
 
 import gspread
 from oauth2client.service_account import ServiceAccountCredentials
@@ -57,3 +57,5 @@ sheet.update("B3:B" + str(2 + len(boughtItemCnt)), boughtItemCnt)
 
 sheet.update("D3:D" + str(2 + len(times)), times)
 sheet.update("E3:" + chr(ord("@") + 4 + mxLength) + str(2 + len(timeItems)), timeItems)
+
+sys.stdout.flush()
