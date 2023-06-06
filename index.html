@@ -308,6 +308,8 @@
         }
 
         document.querySelector("#cost").value = "";
+        totalCost = 0;
+        cost = 0;
         for (let key in items) {
           items[key] = 0;
           document.getElementById(key + " num").innerHTML = 0
