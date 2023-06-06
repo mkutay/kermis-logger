@@ -1,0 +1,41 @@
+{
+	"items": [
+		{"name": "Küpe", "cost": [20, 25, 30, 35, 40]},
+		{"name": "Bilezik", "cost": [40, 55, 60, 80, 100]},
+		{"name": "Kitap Ayracı", "cost": [15]},
+		{"name": "İp Bileklik", "cost": [35]},
+		{"name": "Kolye", "cost": [55, 65]}
+	],
+	"foods": [
+		{"name": "Waffle - Bir Meyveli", "cost": [40]},
+		{"name": "Waffle - İki Meyveli", "cost": [45]},
+		{"name": "Waffle - Üç Meyveli", "cost": [50]},
+		{"name": "Makarna Salatası", "cost": [15]},
+		{"name": "Çikolatalı Kurabiye", "cost": [10]},
+		{"name": "Browni", "cost": [20]},
+		{"name": "Limonata", "cost": [5]},
+		{"name": "Naneli Limonata", "cost": [7]},
+		{"name": "Kısır", "cost": [20]},
+		{"name": "Dereotlu Kurabiye", "cost": [8]},
+		{"name": "Tarçınlı Kurabiye", "cost": [15]},
+		{"name": "Meyve Salatası", "cost": [30]}
+	],
+	"games": [
+		{"name": "Tekli Bilet", "cost": [15]},
+		{"name": "İkili Bilet", "cost": [20]},
+		{"name": "Dörtlü Bilet", "cost": [35]}
+	],
+	"discounts": [
+		{"name": "1 TL İndirim", "discount": -1},
+		{"name": "2 TL İndirim", "discount": -2},
+		{"name": "3 TL İndirim", "discount": -3},
+		{"name": "4 TL İndirim", "discount": -4},
+		{"name": "5 TL İndirim", "discount": -5},
+		{"name": "6 TL İndirim", "discount": -6},
+		{"name": "7 TL İndirim", "discount": -7},
+		{"name": "8 TL İndirim", "discount": -8},
+		{"name": "9 TL İndirim", "discount": -9},
+		{"name": "10 TL İndirim", "discount": -10},
+		{"name": "11 TL İndirim", "discount": -11}
+	]
+}
