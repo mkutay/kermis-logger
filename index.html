@@ -194,28 +194,16 @@
 </div>
 <p>Discounts</p>
 <div>
+  <input type=button class="item-button" value="-" name="sold-item" id="0.5 TL İndirim-0.5" onclick="discountDec('0.5 TL İndirim-0.5')"/>
+  <input type=button class="item-button" value="+" name="sold-item" id="0.5 TL İndirim-0.5" onclick="discountInc('0.5 TL İndirim-0.5')"/>
+  <span id="0.5 TL İndirim-0.5 num" name="-0.5"></span>
+  <span>x 0.5 TL İndirim</span>
+</div>
+<div>
   <input type=button class="item-button" value="-" name="sold-item" id="1 TL İndirim-1" onclick="discountDec('1 TL İndirim-1')"/>
   <input type=button class="item-button" value="+" name="sold-item" id="1 TL İndirim-1" onclick="discountInc('1 TL İndirim-1')"/>
   <span id="1 TL İndirim-1 num" name="-1"></span>
   <span>x 1 TL İndirim</span>
-</div>
-<div>
-  <input type=button class="item-button" value="-" name="sold-item" id="2 TL İndirim-2" onclick="discountDec('2 TL İndirim-2')"/>
-  <input type=button class="item-button" value="+" name="sold-item" id="2 TL İndirim-2" onclick="discountInc('2 TL İndirim-2')"/>
-  <span id="2 TL İndirim-2 num" name="-2"></span>
-  <span>x 2 TL İndirim</span>
-</div>
-<div>
-  <input type=button class="item-button" value="-" name="sold-item" id="3 TL İndirim-3" onclick="discountDec('3 TL İndirim-3')"/>
-  <input type=button class="item-button" value="+" name="sold-item" id="3 TL İndirim-3" onclick="discountInc('3 TL İndirim-3')"/>
-  <span id="3 TL İndirim-3 num" name="-3"></span>
-  <span>x 3 TL İndirim</span>
-</div>
-<div>
-  <input type=button class="item-button" value="-" name="sold-item" id="4 TL İndirim-4" onclick="discountDec('4 TL İndirim-4')"/>
-  <input type=button class="item-button" value="+" name="sold-item" id="4 TL İndirim-4" onclick="discountInc('4 TL İndirim-4')"/>
-  <span id="4 TL İndirim-4 num" name="-4"></span>
-  <span>x 4 TL İndirim</span>
 </div>
 <div>
   <input type=button class="item-button" value="-" name="sold-item" id="5 TL İndirim-5" onclick="discountDec('5 TL İndirim-5')"/>
@@ -223,46 +211,10 @@
   <span id="5 TL İndirim-5 num" name="-5"></span>
   <span>x 5 TL İndirim</span>
 </div>
-<div>
-  <input type=button class="item-button" value="-" name="sold-item" id="6 TL İndirim-6" onclick="discountDec('6 TL İndirim-6')"/>
-  <input type=button class="item-button" value="+" name="sold-item" id="6 TL İndirim-6" onclick="discountInc('6 TL İndirim-6')"/>
-  <span id="6 TL İndirim-6 num" name="-6"></span>
-  <span>x 6 TL İndirim</span>
-</div>
-<div>
-  <input type=button class="item-button" value="-" name="sold-item" id="7 TL İndirim-7" onclick="discountDec('7 TL İndirim-7')"/>
-  <input type=button class="item-button" value="+" name="sold-item" id="7 TL İndirim-7" onclick="discountInc('7 TL İndirim-7')"/>
-  <span id="7 TL İndirim-7 num" name="-7"></span>
-  <span>x 7 TL İndirim</span>
-</div>
-<div>
-  <input type=button class="item-button" value="-" name="sold-item" id="8 TL İndirim-8" onclick="discountDec('8 TL İndirim-8')"/>
-  <input type=button class="item-button" value="+" name="sold-item" id="8 TL İndirim-8" onclick="discountInc('8 TL İndirim-8')"/>
-  <span id="8 TL İndirim-8 num" name="-8"></span>
-  <span>x 8 TL İndirim</span>
-</div>
-<div>
-  <input type=button class="item-button" value="-" name="sold-item" id="9 TL İndirim-9" onclick="discountDec('9 TL İndirim-9')"/>
-  <input type=button class="item-button" value="+" name="sold-item" id="9 TL İndirim-9" onclick="discountInc('9 TL İndirim-9')"/>
-  <span id="9 TL İndirim-9 num" name="-9"></span>
-  <span>x 9 TL İndirim</span>
-</div>
-<div>
-  <input type=button class="item-button" value="-" name="sold-item" id="10 TL İndirim-10" onclick="discountDec('10 TL İndirim-10')"/>
-  <input type=button class="item-button" value="+" name="sold-item" id="10 TL İndirim-10" onclick="discountInc('10 TL İndirim-10')"/>
-  <span id="10 TL İndirim-10 num" name="-10"></span>
-  <span>x 10 TL İndirim</span>
-</div>
-<div>
-  <input type=button class="item-button" value="-" name="sold-item" id="11 TL İndirim-11" onclick="discountDec('11 TL İndirim-11')"/>
-  <input type=button class="item-button" value="+" name="sold-item" id="11 TL İndirim-11" onclick="discountInc('11 TL İndirim-11')"/>
-  <span id="11 TL İndirim-11 num" name="-11"></span>
-  <span>x 11 TL İndirim</span>
-</div>
     </div>
 
     <div style="text-align: center">
-      <label for="cost">Cost: </label>
+      <label for="cost">Total Cost: </label>
       <input type="text" id="cost" name="cost" class="cost-num" inputmode="numeric"> 
     </div>
 
@@ -293,7 +245,6 @@
     <script>
       let totalCost = 0;
       let buttons = document.querySelectorAll("input[name='sold-item']");
-      let discountTotal = 0;
       let items = {};
       buttons.forEach((button) => {
         items[button.id] = 0;
@@ -315,14 +266,12 @@
         document.getElementById(id + " num").innerHTML = ++items[id];
         totalCost += Number(document.getElementById(id + " num").getAttribute("name"));
         document.querySelector("#cost").value = totalCost;
-        discountTotal++;
       }
       function discountDec(id) {
         if (items[id] == 0) return;
         document.getElementById(id + " num").innerHTML = --items[id];
         totalCost -= Number(document.getElementById(id + " num").getAttribute("name"));
         document.querySelector("#cost").value = totalCost;
-        discountTotal--;
       }
 
       const sendBtn = document.querySelector("#send-button");
@@ -347,10 +296,6 @@
         } else if (/^\d+$/.test(cost) == false) {
           document.getElementById("error").style = "color: #bf616a;";
           document.getElementById("error").innerHTML = "Error: Cost contains non digit characters."
-          return;
-        } else if (discountTotal > 1) {
-          document.getElementById("error").style = "color: #bf616a;";
-          document.getElementById("error").innerHTML = "Error: More than one discount selected."
           return;
         }
 

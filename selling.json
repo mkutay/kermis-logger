@@ -26,16 +26,8 @@
 		{"name": "Dörtlü Bilet", "cost": [35]}
 	],
 	"discounts": [
+		{"name": "0.5 TL İndirim", "discount": -0.5},
 		{"name": "1 TL İndirim", "discount": -1},
-		{"name": "2 TL İndirim", "discount": -2},
-		{"name": "3 TL İndirim", "discount": -3},
-		{"name": "4 TL İndirim", "discount": -4},
-		{"name": "5 TL İndirim", "discount": -5},
-		{"name": "6 TL İndirim", "discount": -6},
-		{"name": "7 TL İndirim", "discount": -7},
-		{"name": "8 TL İndirim", "discount": -8},
-		{"name": "9 TL İndirim", "discount": -9},
-		{"name": "10 TL İndirim", "discount": -10},
-		{"name": "11 TL İndirim", "discount": -11}
+		{"name": "5 TL İndirim", "discount": -5}
 	]
 }
