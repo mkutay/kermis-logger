@@ -303,11 +303,12 @@
           return;
         } else if (/^[0-9]*\\.?[0-9]*$/.test(cost) == true) {
           document.getElementById("error").style = "color: #bf616a;";
-          document.getElementById("error").innerHTML = "Error: Cost contains non digit characters."
+          document.getElementById("error").innerHTML = "Error: Cost contains non digit characters.";
           return;
         } else if (cost < 0) {
           document.getElementById("error").style = "color: #bf616a;";
-          document.getElementById("error").innerHTML = "Error: Cost is negative."
+          document.getElementById("error").innerHTML = "Error: Cost is negative.";
+          return;
         }
 
         document.querySelector("#cost").value = "";
