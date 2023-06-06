@@ -293,7 +293,7 @@
           document.getElementById("error").style = "color: #bf616a;";
           document.getElementById("error").innerHTML = "Error: No items selected.";
           return;
-        } else if (/^\d+$/.test(cost) == false) {
+        } else if (/^[0-9]*\\.?[0-9]*$/.test(cost) == true) {
           document.getElementById("error").style = "color: #bf616a;";
           document.getElementById("error").innerHTML = "Error: Cost contains non digit characters."
           return;
