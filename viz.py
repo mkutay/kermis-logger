@@ -25,7 +25,7 @@ mxLength = 0
 
 for item in data:
   times.append([strftime('%Y-%m-%d %H:%M:%S', localtime(item["timeStamp"] / 1000 + 10800))])
-  totalCost += int(item["cost"])
+  totalCost += float(item["cost"])
   timeItem = []
   for key, value in item["bought"].items():
     timeItem.append(str(value) + " " + key)
