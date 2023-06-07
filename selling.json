@@ -13,7 +13,7 @@
 		{"name": "Makarna Salatası", "cost": [15]},
 		{"name": "Çikolatalı Kurabiye", "cost": [10]},
 		{"name": "Browni", "cost": [20]},
-		{"name": "Limonata", "cost": [5]},
+		{"name": "Limonata", "cost": [10, 15]},
 		{"name": "Naneli Limonata", "cost": [7]},
 		{"name": "Kısır", "cost": [20]},
 		{"name": "Dereotlu Kurabiye", "cost": [8]},
