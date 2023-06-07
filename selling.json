@@ -10,7 +10,7 @@
 		{"name": "Waffle - Bir Meyveli", "cost": [40]},
 		{"name": "Waffle - İki Meyveli", "cost": [45]},
 		{"name": "Waffle - Üç Meyveli", "cost": [50]},
-		{"name": "Makarna Salatası", "cost": [15]},
+		{"name": "Makarna Salatası", "cost": [20]},
 		{"name": "Çikolatalı Kurabiye", "cost": [10]},
 		{"name": "Browni", "cost": [20]},
 		{"name": "Limonata", "cost": [10, 15]},
