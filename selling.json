@@ -26,7 +26,8 @@
 	"games": [
 		{"name": "Tekli Bilet", "cost": [15]},
 		{"name": "İkili Bilet", "cost": [20]},
-		{"name": "Dörtlü Bilet", "cost": [35]}
+		{"name": "Dörtlü Bilet", "cost": [35]},
+		{"name": "Onlu Bilet", "cost": [80]}
 	],
 	"discounts": [
 		{"name": "0.5 TL İndirim", "discount": -0.5},
