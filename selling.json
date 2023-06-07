@@ -18,7 +18,8 @@
 		{"name": "Kısır", "cost": [20]},
 		{"name": "Dereotlu Kurabiye", "cost": [8]},
 		{"name": "Tarçınlı Kurabiye", "cost": [15]},
-		{"name": "Meyve Salatası", "cost": [30]}
+		{"name": "Meyve Salatası", "cost": [30]},
+		{"name": "Deninz Kurabiyesi", "cost": [6, 10]}
 	],
 	"games": [
 		{"name": "Tekli Bilet", "cost": [15]},
