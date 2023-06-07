@@ -20,7 +20,8 @@
 		{"name": "Tarçınlı Kurabiye", "cost": [15]},
 		{"name": "Meyve Salatası", "cost": [30]},
 		{"name": "Deninz Kurabiyesi", "cost": [6, 10]},
-		{"name": "mavi meth", "cost":[4]}
+		{"name": "mavi meth", "cost": [4]},
+		{"name": "Elmali Kurabiye", "cost": [15]}
 	],
 	"games": [
 		{"name": "Tekli Bilet", "cost": [15]},
