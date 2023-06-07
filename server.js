@@ -6,8 +6,6 @@ const cors = require('cors')
 const { spawn } = require('child_process');
 const { totalmem } = require("os");
 
-let firstTime = true;
-
 const app = express();
 
 app.use(bodyParser.json());
@@ -32,11 +30,6 @@ app.post("/add", (req, res) => {
     throw error;
   }
   let jsn = JSON.parse(data);
-
-  if (firstTime == true) {
-    firstTime = false;
-    jsn = {"data": []};
-  }
 
   jsn["data"].push({"bought": bought, "cost": cost, "timeStamp": timeStamp});
 
