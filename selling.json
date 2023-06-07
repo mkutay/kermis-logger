@@ -2,8 +2,8 @@
 	"items": [
 		{"name": "Küpe", "cost": [20, 25, 30, 35, 40]},
 		{"name": "Bilezik", "cost": [40, 55, 60, 80, 100]},
-		{"name": "Kitap Ayracı", "cost": [15]},
-		{"name": "İp Bileklik", "cost": [35]},
+		{"name": "Kitap Ayracı", "cost": [20]},
+		{"name": "İp Bileklik", "cost": [40]},
 		{"name": "Kolye", "cost": [55, 65]}
 	],
 	"foods": [
