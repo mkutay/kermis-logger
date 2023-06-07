@@ -53,5 +53,16 @@ for item in selling["discounts"]:
   html += """  <span>x {}</span>\n""".format(item["name"])
   html += "</div>\n"
 
+html += """<p>Bagis</p>\n"""
+for item in selling["bagis"]:
+  for i in range(len(item["cost"])):
+    id = item["name"] + str(item["cost"][i])
+    html += "<div>\n"
+    html += """  <input type=button class="item-button" value="-" name="sold-item" id="{}" onclick="buttonDec('{}')"/>\n""".format(id, id)
+    html += """  <input type=button class="item-button" value="+" name="sold-item" id="{}" onclick="buttonInc('{}')"/>\n""".format(id, id)
+    html += """  <span id="{} num" name="{}"></span>\n""".format(id, item["cost"][i])
+    html += """  <span>x {} ({} TL)</span>\n""".format(item["name"], item["cost"][i])
+    html += "</div>\n"
+
 with open('output.html', 'w') as f:
   f.write(html)

@@ -31,5 +31,10 @@
 		{"name": "0.5 TL İndirim", "discount": -0.5},
 		{"name": "1 TL İndirim", "discount": -1},
 		{"name": "5 TL İndirim", "discount": -5}
+	],
+	"bagis": [
+		{"name": "5 TL Bagis", "cost": [5]},
+		{"name": "10 TL Bagis", "cost": [10]},
+		{"name": "20 TL Bagis", "cost": [20]}
 	]
 }
